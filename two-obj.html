@@ -1,0 +1,56 @@
+
+<!doctype html>
+<html>
+<head>
+<title>Last Mile</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+  	function loadObject(url) {
+  		var iFrame = document.getElementById("arFrame");
+  		iFrame.contentWindow.postMessage(url, '*');
+  	}
+  </script>
+<style type="text/css">
+.object {a
+	float: right;
+	margin-right:10px;
+	border: 1px solid;
+}
+.dynamicImgs {
+	border-bottom: 1px solid silver;
+	padding-left: 14%;
+}
+
+.image {
+	vertical-align: middle;
+    max-width: 189px;
+    margin-left: 17%;
+	}
+</style>
+</head>
+<body>
+	<div class="row">
+	<div class="col-sm-6 col-md-6 col-lg-9" style="height:600px;">
+		<iframe style="width:100%;height:100%;" name="arFrame" id="arFrame" src="3.html">
+		</iframe>
+	</div>
+
+	<div class="col-sm-6 col-md-6 col-lg-3" style="border: 1px solid;height: 600px;overflow:scroll;">
+		<div class="dynamicImgs">
+			<img class="image" onclick="loadObject('resources/couch')" src="resources/couch1.jpg">
+		</div>
+		<!--div class="dynamicImgs">
+			<img class="image" onclick="loadObject('resources/items/table/wooden-coffe-table')" src="resources/items/table/round-table.jpg">
+		</div-->
+		<div class="dynamicImgs">
+			<img class="image" onclick="loadObject('resources/items/sq-table/attach-demo-table')" src="resources/items/sq-table/sq-table.jpg">
+		</div>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<script src="https://aframe.io/releases/0.8.0/aframe.ar.js"></script>
+<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+<script src=”https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+<script src="https://rawgit.com/darkwave/aframe-stl-model-component/master/dist/aframe-stl-model-component.min.js"></script>
+<a-scene embedded arjs = 'trackingMethod: best;'>
+	<!--<a-anchor hit-test-enabled='true'>
+
+		<a-entity 
+		position = "0.5 -2 -0.5"
+		scale = "0.10 0.10 0.10"
+		obj-model="obj: url(Models/Wolf_One_obj.obj);">
+	</a-entity>
+	</a-anchor>
+	<a-camera-static/>   -->
+
+	<a-assets>
+        <a-asset-item response-type="arraybuffer" id="dino" src="https://cdn.glitch.com/826e287b-9c64-4dd5-ab65-dd56b6fa33c0%2Fdino.stl?1527154719875"></a-asset-item>
+        <img id="dino-mtl" src="https://cdn.glitch.com/826e287b-9c64-4dd5-ab65-dd56b6fa33c0%2F1268.jpg?1527856777866" > 
+      </a-assets> 
+       <a-entity stl-model="src: #dino" scale=".03 .03 .03" rotation="-90 0 0" position="-1 1 -1" material="src: #dino-mtl; shader:flat" fit-texture shadow></a-entity>
+       <a-box material="src: #dino-mtl"></a-box>
+       <a-plane position="0 1 -4" rotation="-90 0 0" width="4" height="4" material="src: #dino-mtl" shadow></a-plane>
+       <a-sky color="#ECECEC"></a-sky>
+</a-scene>
+</html>

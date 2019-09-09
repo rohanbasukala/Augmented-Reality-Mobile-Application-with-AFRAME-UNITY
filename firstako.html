@@ -1,0 +1,17 @@
+<html>
+<head>
+<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+<!-- include ar.js for A-Frame -->
+<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+  <a-scene embedded arjs>
+  	<a-marker preset="hiro">
+	  	<a-entity scale=".5 .5 .5">
+ 		<a-entity gltf-model="skull_downloadable/firstako.gltf" position ="0 0 0 " scale="0.003 0.003 0.003" position="0.1 0.1 0.1" rotation= "270 270 90"></a-entity>
+ 		</a-entity>
+
+    </a-marker>
+  </a-scene>
+</body> 
+</html>

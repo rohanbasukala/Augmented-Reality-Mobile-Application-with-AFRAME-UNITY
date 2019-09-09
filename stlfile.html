@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, WebVR! - A-Frame</title>
+    <meta name="description" content="Hello, WebVR! - A-Frame">
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/darkwave/aframe-stl-model-component/master/dist/aframe-stl-model-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+       <a-assets>
+        <a-asset-item response-type="arraybuffer" id="dino" src="https://cdn.glitch.com/826e287b-9c64-4dd5-ab65-dd56b6fa33c0%2Fdino.stl?1527154719875"></a-asset-item>
+        <img id="dino-mtl" src="https://cdn.glitch.com/826e287b-9c64-4dd5-ab65-dd56b6fa33c0%2F1268.jpg?1527856777866" > 
+      </a-assets> 
+       <a-entity stl-model="src: #dino" scale=".03 .03 .03" rotation="-90 0 0" position="-1 1 -1" material="src: #dino-mtl; shader:flat" fit-texture shadow></a-entity>
+       <a-box material="src: #dino-mtl"></a-box>
+       <a-plane position="0 1 -4" rotation="-90 0 0" width="4" height="4" material="src: #dino-mtl" shadow></a-plane>
+       <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+</html>

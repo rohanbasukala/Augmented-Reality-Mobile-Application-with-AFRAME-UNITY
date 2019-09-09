@@ -1,0 +1,44 @@
+
+<html>
+<head>
+<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+<!-- include ar.js for A-Frame -->
+<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body>
+  <a-scene embedded arjs>
+  	<a-entity scale=".5 .5 .5">
+ 	<a-entity gltf-model="skull_downloadable/Lamborghini_Aventador.gltf" scale="0.005 0.005 0.005">
+ 		
+ 	</a-entity>
+
+ 	</a-entity>
+
+    <a-marker-camera preset='hiro'></a-marker-camera>
+  </a-scene>
+
+  <a-scene embedded arjs>
+  	<a-entity scale=".5 .5 .5">
+ 	<a-entity gltf-model="skull_downloadable/Lamborghini_Aventador.gltf" scale="0.005 0.005 0.005">
+ 		
+ 	</a-entity>
+
+ 	</a-entity>
+
+    <a-marker preset='kanji'>
+
+			<a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:green;'>
+
+				<!--<a-torus-knot radius='0.26' radius-tubular='0.05'>
+
+					<a-animation attribute="rotation" to="360 0 0" dur="5000" easing='linear' repeat="indefinite"></a-animation>
+
+				</a-torus-knot>
+-->
+			</a-box>
+
+		</a-marker>
+  </a-scene>
+</body> 
+</html>
